@@ -1,4 +1,4 @@
-**TreeGrowth** Arma2PlayerMonitor is an c++ application for windows. It monitors the players on an arma2 server. Whenever a player joins or leaves the windows voice output is used to announce that change.
+**Arma2PlayerMonitor** is an c++ application for windows. It monitors the players on an arma2 server. Whenever a player joins or leaves the windows voice output is used to announce that change.
 
 ## Authors
 
