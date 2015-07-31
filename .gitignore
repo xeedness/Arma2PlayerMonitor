@@ -1,5 +1,8 @@
-Debug/
 Release/
+Debug/
 Arma2PlayerMonitor.sln
 Win32/Release/Arma2PlayerMonitor.pdb
 Win32/Debug/
+Arma2PlayerMonitor.opensdf
+Arma2PlayerMonitor.sdf
+Arma2PlayerMonitor.vcxproj.user
