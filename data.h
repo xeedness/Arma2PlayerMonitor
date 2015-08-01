@@ -21,6 +21,7 @@ public:
 	~Data();
 
 	void addLookup(string lookup);
+	bool isLookup(string query);
 	void setAlertMode(int mode) { alertMode = mode; writeConfig(configPath); };
 	void setPlayers(vector<string> players);
 	void selectSpeechOutput();

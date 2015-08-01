@@ -20,7 +20,7 @@
 using namespace std;
 void printToConsole();
 void print_hex(const char *s, int length);
-
+void writeRed(string str);
 void print_string(const char *s, int length);
 
 
@@ -141,7 +141,9 @@ void printToConsole() {
 	cout << left << setw(25);
 	for (auto player = players.begin(); player != players.end(); player++ ) {
 		n++;
-		cout << *player << setw(25);
+		if(data->isLookup(*player)) writeRed(*player);
+		else cout << *player;
+		cout << setw(25);
 		if(n%3 == 0) {
 			cout << endl;
 			cout << left << setw(25);
@@ -158,7 +160,17 @@ void printToConsole() {
 	cout << "Enter a number" << endl << "quit(0), selectAudio(1), selectAudioMode(2), loginMode(3)" << endl;
 }
 
+void writeRed(string str) {
+	HANDLE hstdout = GetStdHandle( STD_OUTPUT_HANDLE );
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	GetConsoleScreenBufferInfo( hstdout, &csbi );
 
+	SetConsoleTextAttribute( hstdout, 0x0C );
+
+	cout << str;
+
+	SetConsoleTextAttribute( hstdout, csbi.wAttributes );
+}
 void print_hex(const char *s, int length)
 {
   for(int i=0; i<length; i++) {

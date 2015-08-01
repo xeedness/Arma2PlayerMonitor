@@ -108,7 +108,9 @@ void Data::addLookup(string lookup) {
 	
 	cout << "Looking for player: " << lookup << endl;
 }
-
+bool Data::isLookup(string query) {
+	return (find(mLookups.begin(), mLookups.end(), query) != mLookups.end());
+}
 void Data::setPlayers(vector<string> players) {
 	messages.clear();
 	alertPlayerChanges(mPlayers, players);
